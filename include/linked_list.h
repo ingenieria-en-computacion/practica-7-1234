@@ -1,4 +1,4 @@
-pragma once
+#pragma once
 #include <stdlib.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -71,8 +71,7 @@ pragma once
         if (!list || pos > list->length) return false; \
         \
         Node_##TYPE* new_node = node_##TYPE##_create(data); \
-        if (!new_node) return false; \        
-        \
+        if (!new_node) return false; \
         if (pos == 0) { \
             new_node->next = list->head; \
             list->head = new_node; \
